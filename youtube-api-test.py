@@ -10,7 +10,7 @@ def configure():
   load_dotenv()
 
 def get_videos_ids_from_playlist(youtube, playlist_id):
-  prev_request = youtube.playlistItems().list(part="snippet", playlistId=playlist_id, maxResults=5)
+  prev_request = youtube.playlistItems().list(part="snippet", playlistId=playlist_id, maxResults=50)
   prev_response = prev_request.execute()
   is_next_page = "nextPageToken" in prev_response
   videos = prev_response["items"]  
