@@ -75,10 +75,7 @@ def main():
   api_key = os.getenv("api_key")
   youtube = build('youtube', 'v3', developerKey=api_key)
 
-  # there is no consistent method of getting the id or username of a channel as far as I know
-  # request = youtube.channels().list(part="statistics", forUsername="INSIDERfood")
-
-  seconds = get_playlist_watch_length_as_seconds(youtube, "PLGhzmQmduiLcxcmq-ayx3IYyUBZZJqq0Y")
+  seconds = get_playlist_watch_length_as_seconds(youtube, "PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8")
   m, s = divmod(seconds, 60)
   h, m = divmod(m, 60)
 
